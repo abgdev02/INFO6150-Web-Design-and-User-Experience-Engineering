@@ -1,0 +1,87 @@
+#homepage{
+    display: grid;
+    grid-template-columns: 1fr 4 fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    'header header'
+    'menu main'
+    'footer footer';
+    background-color: pink;
+}
+
+a{
+    font-weight: bolder;
+    padding-left: 5px;
+}
+
+header{
+    grid-area: header;
+}
+
+header ul{
+    background-color: plum;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+header a{
+    display: block;
+    padding: 21px;
+}
+
+header a:hover{
+    background-color: rebeccapurple;
+    color: white;
+}
+
+body {
+    margin: 0px;
+}
+
+#homepage > nav,#homepage > main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#homepage > nav {
+    grid-area: menu;
+}
+
+#homepage > main{
+    grid-area: main;
+    padding: 1rem;
+}
+
+#homepage > nav ul{
+    border-right: 2px solid black;
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-wrap: wrap;
+    
+}
+
+#homepage > nav li{
+    display: flex;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 0px;
+    list-style-type: none;
+    text-wrap:wrap;
+}
+
+#homepage > nav li:hover{
+    background-color: plum;
+}
+
+footer{
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 5px;
+    display: flex;
+    background-color: plum;
+    grid-area: footer;
+}

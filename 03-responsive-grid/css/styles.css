@@ -1,0 +1,310 @@
+/* General Page Styling */
+
+* {
+    box-sizing: border-box;
+    margin : 0;
+
+    font-family: Helvetica;
+}
+
+a{
+    color:darkgoldenrod;
+}
+
+/* Navigation Bar Styling for smaller screen sizes*/
+
+header{
+    display: grid;
+    grid-area: header;
+
+    position: fixed;
+
+    background-color: white;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.primary-nav{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    
+    align-items: center;
+    padding: 8px;
+}
+    
+.logo-picture{
+    width: 55px;
+    height: 55px;
+    border-radius: 13px;
+}
+    
+h1{
+    padding-left: 13px;
+    grid-column: span 5;
+}
+    
+.header-menu{
+    display: flex;
+    flex-direction: row;
+    grid-column-start: 12;
+}
+    
+.header-menu li{
+    display: flex;
+    
+    justify-content: space-between;
+    padding: 8px;
+    width: 5rem;
+}
+
+/* Main content styling for smaller screen sizes */
+
+main{
+    padding-top: 165px;
+    padding-left: 21px;
+    padding-bottom: 55px;
+}
+
+.cardlist{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap: 20px;
+
+    padding: 21px;
+}
+
+.card{
+    display: grid;
+    grid-template-rows: auto 1fr 4fr 1fr;
+}
+
+main li{
+    display: flex;
+    grid-column: 1;
+
+    background-color: white;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 21px;
+    
+
+    padding-top: 21px;
+    padding-right: 21px;
+    padding-left: 21px;
+    padding-bottom: 8px;
+}
+
+main li:hover{
+    display: flex;
+    grid-column: 1;
+
+    background-color:beige;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 21px;
+    
+    padding: 13px;
+}
+
+main img{
+    width: 100%;
+    height: 288px;
+    border-radius: 13px;
+}
+
+p{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+h3{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* footer styling for smaller screen sizes */
+
+footer{
+    display: grid;
+    grid-area: footer;
+
+    box-shadow: 2px 0px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.footer-nav ul{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+
+    align-items: center;
+    padding: 8px;
+}
+
+.footer-menu{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.footer-menu li{
+    display: grid;
+    grid-column: span 12;
+    justify-content: center;
+
+    width: 100%;
+    padding: 8px;
+}
+
+@media(min-width: 50rem) {
+
+    .landingpage{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            'header'
+            'main'
+            'footer'
+        ;
+    }
+    
+    /* Navigation Bar Styling */
+    
+    header{
+        display: grid;
+        grid-area: header;
+    
+        position: fixed;
+    
+        background-color: white;
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    }
+    
+    .primary-nav{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    
+        align-items: center;
+        padding: 8px;
+    }
+    
+    .logo-picture{
+        width: 55px;
+        height: 55px;
+         border-radius: 13px;
+    }
+    
+    h1{
+        padding-left: 13px;
+        
+        grid-column: span 5;
+    }
+    
+    .header-menu{
+        display: flex;
+        flex-direction: row;
+        grid-column-start: 12;
+    }
+    
+    .header-menu li{
+        display: flex;
+    
+        justify-content: space-between;
+        padding: 8px;
+        width: 8rem;
+    }
+    
+    /* Main Content Styling */
+    
+    main{
+        padding-top: 123px;
+        padding-left: 21px;
+        padding-bottom: 55px;
+    }
+    
+    .cardlist{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto;
+        grid-gap: 20px;
+    
+        padding: 21px;
+    }
+    
+    main li{
+        display: flex;
+        grid-column: span 4;
+    
+        background-color: white;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 21px;
+        
+        padding-top: 21px;
+        padding-right: 21px;
+        padding-left: 21px;
+        padding-bottom: 8px;
+        list-style: none;
+    }
+    
+    main li:hover{
+        display: flex;
+        grid-column: span 4;
+    
+        background-color:beige;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 21px;
+        
+        padding: 13px;
+        list-style: none;
+    }
+
+    .card{
+        display: grid;
+        grid-template-rows: auto 1fr 4fr 1fr;
+    }
+    
+    main img{
+        width: 100%;
+        height: 288px;
+        border-radius: 13px;
+    }
+    
+    p{
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    
+    h3{
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    
+    /* Footer Styling */
+    
+    footer{
+        display: grid;
+        grid-area: footer;
+    
+        box-shadow: 2px 0px 3px 0px rgba(0, 0, 0, 0.1);
+    }
+    
+    .footer-nav ul{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    
+        align-items: center;
+        padding: 8px;
+    }
+    
+    .footer-menu{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .footer-menu li{
+        display: grid;
+        grid-column: span 2;
+        justify-content: left;
+    
+        width: 100%;
+        padding: 8px;
+        
+        font-size: small;
+    }
+    
+}
